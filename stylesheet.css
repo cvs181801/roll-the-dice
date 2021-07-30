@@ -15,7 +15,7 @@ body {
     align-content: center;
     justify-content: center;
     font-family: var(--ff-primary);  
-    color: var(--green);
+    color: navy;
 }
 
 .perspect {
@@ -24,7 +24,7 @@ body {
      between the z=0 plane and the user in order to give a 3D-positioned element some perspective. */
     width: 4em;
     height: 4em;
-    border: 1px solid white;
+    
 }
 
 .cube__container {
@@ -46,17 +46,16 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
 
 .cube__face {
     position: absolute;
-    top: 5em;
-    left: 5em;
+    top: 2em;
+    left: 8em;
     width: 2.5em;
     height: 2.5em;
     border: 2px solid white;
     text-align: center;
     line-height: 3em;
     font-weight: 700;
-    
 }
-
+/*
 .cube.show__1  {
      transform: translateZ(-100px) rotateY(0deg); 
     }
@@ -75,17 +74,19 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
 .cube.show__6 { 
     transform: translateZ(-100px) rotateX(90deg); 
 }
-
+*/
 .cube__face__1  { 
     background: var(--yellow);  
     opacity: 0.75;
     transform: rotateY(  0deg) translateZ(100px); 
 }
+
 .cube__face__2 {  
     background: var(--yellow);   
     opacity: 0.75; 
     transform: rotateY(180deg) translateZ(100px);
 }
+
 .cube__face__3  { 
     background: var(--yellow);    
     opacity: 0.75; 
@@ -111,5 +112,5 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
 .roll__dice__btn {
     background-color: var(--yellow);
     font-family: inherit;
-    margin: 0 auto;
+    margin: 10em 50em 5em 50em;
 }
