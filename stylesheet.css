@@ -1,6 +1,8 @@
 :root {
     --ff-primary: 'Quicksand', sans-serif;
     --fuschia: rgb(252, 5, 252);
+    --yellow: rgb(250, 250, 168);
+    --green: rgb(34, 252, 6);
 }
 
 * {
@@ -9,24 +11,31 @@
 
 body {
     background-color: var(--fuschia);
-    
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    font-family: var(--ff-primary);  
+    color: var(--green);
 }
 
 .perspect {
-    perspective: 600px;
+    perspective: 3000px;
+    /* The perspective CSS property determines the distance
+     between the z=0 plane and the user in order to give a 3D-positioned element some perspective. */
     width: 4em;
     height: 4em;
-    margin: .5em;
     border: 1px solid white;
 }
 
 .cube__container {
-    width: 4em;
-    height: 4em;
+    width: 20em;
+    height: 20em;
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-100px);
     transition: transform 1s;
+    font-size: 5rem;
+    
 }
 /*The transform-style CSS property determines if the children of the element are positioned in the 3D-space or are flattened
 in the plane of the element.
@@ -35,21 +44,72 @@ must be used together with the transform property.
 The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., 
 closer to or farther away from the viewer. Its result is a <transform-function> data type.*/
 
-.cube.show-1  {
+.cube__face {
+    position: absolute;
+    top: 5em;
+    left: 5em;
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px solid white;
+    text-align: center;
+    line-height: 3em;
+    font-weight: 700;
+    
+}
+
+.cube.show__1  {
      transform: translateZ(-100px) rotateY(0deg); 
     }
-.cube.show-2  { 
+.cube.show__2  { 
     transform: translateZ(-100px) rotateY(-180deg); 
 }
-.cube.show-3  { 
+.cube.show__3  { 
     transform: translateZ(-100px) rotateY(-90deg); 
 }
-.cube.show-4   { 
+.cube.show__4   { 
     transform: translateZ(-100px) rotateY(90deg); 
 }
-.cube.show-5   { 
+.cube.show__5   { 
     transform: translateZ(-100px) rotateX(-90deg); 
 }
-.cube.show-6 { 
+.cube.show__6 { 
     transform: translateZ(-100px) rotateX(90deg); 
+}
+
+.cube__face__1  { 
+    background: var(--yellow);  
+    opacity: 0.75;
+    transform: rotateY(  0deg) translateZ(100px); 
+}
+.cube__face__2 {  
+    background: var(--yellow);   
+    opacity: 0.75; 
+    transform: rotateY(180deg) translateZ(100px);
+}
+.cube__face__3  { 
+    background: var(--yellow);    
+    opacity: 0.75; 
+    transform: rotateY( 90deg) translateZ(100px); 
+}
+
+.cube__face__4  {  
+    background: var(--yellow);    
+    opacity: 0.75; 
+    transform: rotateY(-90deg) translateZ(100px); 
+}
+.cube__face__5   {  
+    background: var(--yellow);    
+    opacity: 0.75; 
+    transform: rotateX( 90deg) translateZ(100px);
+}
+.cube__face__6 {  
+    background: var(--yellow);   
+    opacity: 0.75; 
+    transform: rotateX(-90deg) translateZ(100px); 
+}
+
+.roll__dice__btn {
+    background-color: var(--yellow);
+    font-family: inherit;
+    margin: 0 auto;
 }
