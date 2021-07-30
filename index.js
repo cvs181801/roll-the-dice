@@ -2,4 +2,14 @@
 
 //create a way to generate a random number
 
-console.log(Math.floor(Math.random()));
+function randomNum() {
+    const result = Math.floor(Math.random()* 6);
+    if (result >= 1) {
+        return result;
+    } else {
+        return 6;
+    }
+}
+
+console.log(randomNum());
+

@@ -1,0 +1,37 @@
+:root {
+    --ff-primary: 'Quicksand', sans-serif;
+    --fuschia: rgb(252, 5, 252);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fuschia);
+    
+}
+
+.perspect {
+    perspective: 600px;
+    width: 4em;
+    height: 4em;
+    margin: .5em;
+    border: 1px solid white;
+}
+
+.cube__container {
+    width: 4em;
+    height: 4em;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+}
+/*The transform-style CSS property determines if the children of the element are positioned in the 3D-space or are flattened
+in the plane of the element.
+must be used together with the transform property.
+
+The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., 
+closer to or farther away from the viewer. Its result is a <transform-function> data type.*/
+
