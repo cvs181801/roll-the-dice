@@ -22,10 +22,10 @@ function rollDice() {
     let showClass = "show__" + randomNumber;
     console.log(showClass);
     if (currentClass) {
-cube.classList.remove(currentClass);
+        cube.classList.remove(currentClass);
     }
-    cube.classList.add(showClass);
-    currentClass = showClass;
+        cube.classList.add(showClass);
+        currentClass = showClass;
 }
 
 console.log(rollDice());

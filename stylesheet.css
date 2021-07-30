@@ -17,17 +17,24 @@ body {
     font-family: var(--ff-primary);  
     color: navy;
 }
-
+/*
 .perspect {
     perspective: 3000px;
     /* The perspective CSS property determines the distance
-     between the z=0 plane and the user in order to give a 3D-positioned element some perspective. */
+     between the z=0 plane and the user in order to give a 3D-positioned element some perspective. 
     width: 4em;
     height: 4em;
     
+} */
+
+.perspect {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    perspective:600px;
 }
 
-.cube__container {
+/*.cube__container {
     width: 20em;
     height: 20em;
     position: relative;
@@ -44,7 +51,16 @@ must be used together with the transform property.
 The translateZ() CSS function repositions an element along the z-axis in 3D space, i.e., 
 closer to or farther away from the viewer. Its result is a <transform-function> data type.*/
 
-.cube__face {
+.cube__container {
+    width:200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+}
+
+/*.cube__face {
     position: absolute;
     top: 2em;
     left: 8em;
@@ -54,6 +70,18 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
     text-align: center;
     line-height: 3em;
     font-weight: 700;
+} */
+
+.cube__face {
+    position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
 }
 
 .cube__container.show__1  {
