@@ -2,7 +2,7 @@
     --ff-primary: 'Quicksand', sans-serif;
     --fuschia: rgb(252, 5, 252);
     --yellow: rgb(250, 250, 168);
-    --green: rgb(34, 252, 6);
+    --green: rgb(140, 235, 129);
 }
 
 * {
@@ -17,22 +17,12 @@ body {
     font-family: var(--ff-primary);  
     color: navy;
 }
-/*
-.perspect {
-    perspective: 3000px;
-    /* The perspective CSS property determines the distance
-     between the z=0 plane and the user in order to give a 3D-positioned element some perspective. 
-    width: 4em;
-    height: 4em;
-    
-} */
 
 .perspect {
     width: 200px;
     height: 200px;
-   /* margin: 20px;*/
     margin: 0 auto;
-    perspective:600px;
+    perspective: 600px;
 }
 
 /*.cube__container {
@@ -53,7 +43,7 @@ The translateZ() CSS function repositions an element along the z-axis in 3D spac
 closer to or farther away from the viewer. Its result is a <transform-function> data type.*/
 
 .cube__container {
-    width:200px;
+    width: 200px;
     height: 200px;
     position: relative;
     transform-style: preserve-3d;
@@ -107,7 +97,7 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
 .cube__face__1  { 
     background: var(--yellow);  
     opacity: 0.75;
-    transform: rotateY(  0deg) translateZ(100px); 
+    transform: rotateY(0deg) translateZ(100px); 
 }
 
 .cube__face__2 {  
@@ -138,8 +128,16 @@ closer to or farther away from the viewer. Its result is a <transform-function> 
     transform: rotateX(-90deg) translateZ(100px); 
 }
 
+.roll__dice__div {
+    margin: 0 auto 5em auto;
+    padding: 1em auto 6em auto;
+}
+
 .roll__dice__btn {
-    background-color: var(--yellow);
+    background-color: var(--green);
     font-family: inherit;
-    margin: 10em 50em 5em 50em;
+    /*margin: 10em 50em 5em 50em;*/
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.3rem;
 }
